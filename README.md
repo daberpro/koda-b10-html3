@@ -18,5 +18,5 @@ here the result
 ### Result page
 i added a result page to mimic the actual data have been send from submit
 ![dummy data table](image.png)
-### and also link to access directly into result page
+and also link to access directly into result page
 ![alt text](image-1.png)
