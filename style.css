@@ -18,10 +18,10 @@ html,body{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    background-color: silver;
+    background-color: rgb(247, 242, 253);
 }
 
-.form-container > form {
+.form-container > form { 
     width: 800px;
     height: fit-content;
     display: flex;
@@ -34,6 +34,11 @@ html,body{
 .form-container > form > div {
     border-radius: 1.2rem;
     background-color: white;
+    border: 1px solid rgba(0,0,0,0.25);
+}
+
+.form-container > form > div:last-child{
+    border: none;
 }
 
 .form-container > form > .form-header{
@@ -155,4 +160,68 @@ html,body{
 
 .form-container > form > .form-input > .multi-option-col > div > input[type="radio"]:checked:before{
     transform: scale(1);
+}
+
+
+
+.form-container > form > .form-input > .multi-option-col > div > input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.2rem;
+    border: 2px solid rgb(102, 0, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container > form > .form-input > .multi-option-col > div > input[type="checkbox"]::before{
+    content: "\2713";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.2rem;
+    background-color: rgb(102, 0, 255);
+    transform: scale(0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-weight: bold;
+}
+
+.form-container > form > .form-input > .multi-option-col > div > input[type="checkbox"]:checked:before{
+    transform: scale(1);
+}
+
+.form-container > form > .action {
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-container > form > .action > button[type="submit"]{
+    outline: none;
+    background-color: rgb(102, 0, 255);
+    color: white;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.form-container > form > .action > button[type="reset"]{
+    outline: none;
+    color: rgb(102, 0, 255);
+    background: transparent;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
 }
