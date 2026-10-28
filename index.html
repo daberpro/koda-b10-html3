@@ -10,7 +10,7 @@
 
     <div class="form-container">
         <form action="result.html">
-    
+
             <div class="form-header">
                 <div>
                     <h1>Judul Formulir</h1>
@@ -22,55 +22,62 @@
                     <span>&ast; indicates required question</span>
                 </div>
             </div>
-    
+
             <div class="form-input">
                 <label for="name">Siapa nama anda?</label>
-                <br>
                 <input name="nama" id="name" type="text">
             </div>
-    
+
             <div class="form-input">
                 <label for="age">Berapa umur anda?</label>
-                <br>
                 <input name="umur" id="age" type="number">
             </div>
-    
+
             <div class="form-input">
                 Apa jenis kelamin anda?
-                <br>
-                <div>
-                    <input name="jenis-kelamin" id="male" type="radio" value="Laki-laki" checked><label
-                        for="male">Laki-laki</label>
-                    <input name="jenis-kelamin" id="female" type="radio" value="Perempuan"><label
-                        for="female">Perempuan</label>
+                <div class="multi-option-col">
+                    <div>
+                        <input name="jenis-kelamin" id="male" type="radio" value="Laki-laki" checked><label
+                            for="male">Laki-laki</label>
+                    </div>
+                    <div>
+                        <input name="jenis-kelamin" id="female" type="radio" value="Perempuan"><label
+                            for="female">Perempuan</label>
+                    </div>
                 </div>
             </div>
-    
+
             <div class="form-input">
                 Apakah anda perokok?
-                <br>
-                <div>
-                    <input checked name="perokok" id="smoker" type="radio" value="Perokok"><label for="smoker">Ya</label>
-                    <input name="perokok" id="notsmoker" type="radio" value="Bukan perokok"><label
-                        for="notsmoker">Tidak</label>
+                <div class="multi-option-col">
+                    <div>
+                        <input checked name="perokok" id="smoker" type="radio" value="Perokok"><label
+                            for="smoker">Ya</label>
+                    </div>
+                    <div>
+                        <input name="perokok" id="notsmoker" type="radio" value="Bukan perokok"><label
+                            for="notsmoker">Tidak</label>
+                    </div>
                 </div>
             </div>
-    
-            <div>
+
+            <div class="form-input">
                 Jika anda perokok, rokok apa yang pernah anda coba?
                 <div>
-                    <input type="checkbox" id="m1" name="merek" value="Gudang garam filter"><label for="m1">Gudang garam filter</label><br>
-                    <input type="checkbox" id="m2" name="merek" value="Luck Strike"><label for="m2">Luck Strike</label><br>
+                    <input type="checkbox" id="m1" name="merek" value="Gudang garam filter"><label for="m1">Gudang garam
+                        filter</label><br>
+                    <input type="checkbox" id="m2" name="merek" value="Luck Strike"><label for="m2">Luck
+                        Strike</label><br>
                     <input type="checkbox" id="m3" name="merek" value="Marioboro"><label for="m3">Marioboro</label><br>
                     <input type="checkbox" id="m4" name="merek" value="Esse"><label for="m4">Esse</label><br>
                 </div>
             </div>
-    
+
             <div>
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
             </div>
-    
+
         </form>
     </div>
 
