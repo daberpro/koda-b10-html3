@@ -1,165 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Data Hasil Survey</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th rowspan="2">Nama</th>
-                <th rowspan="2">Umur</th>
-                <th colspan="2">Jenis Kelamin</th>
-                <th colspan="2">Perokok</th>
-                <th colspan="4">Merk rokok dicoba</th>
-            </tr>
-            <tr>
-                <th>Laki - Laki</th>
-                <th>Perempuan</th>
-                <th>Ya</th>
-                <th>Tidak</th>
+    <div class="container">
 
-                <th>Marioboro</th>
-                <th>Esse</th>
-                <th>Luck strike</th>
-                <th>Gudang garam filter</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr align="center">
-                <td>Subwo rianto</td>
-                <td>70</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr align="center">
-                <td>Lengmang chuih</td>
-                <td>30</td>
-                
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                
-                <td>&check;</td>
-                <td>&nbsp;</td>
+        <h1 class="title">Data Hasil Survey</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Nama</th>
+                    <th rowspan="2">Umur</th>
+                    <th colspan="2">Jenis Kelamin</th>
+                    <th colspan="2">Perokok</th>
+                    <th colspan="4">Merk rokok dicoba</th>
+                </tr>
+                <tr>
+                    <th>Laki - Laki</th>
+                    <th>Perempuan</th>
+                    <th>Ya</th>
+                    <th>Tidak</th>
 
-                <td>&check;</td>
-                <td>&check;</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr align="center">
-                <td>Durianto</td>
-                <td>28</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
+                    <th>Marioboro</th>
+                    <th>Esse</th>
+                    <th>Luck strike</th>
+                    <th>Gudang garam filter</th>
+                </tr>
+            </thead>
+            <tbody id="content-body">
                 
-                <td></td>
-                <td>&check;</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr align="center">
-                <td>Santi Lukman</td>
-                <td>27</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                
-                <td></td>
-                <td></td>
-                <td>&check;</td>
-                <td>&check;</td>
-            </tr>
-            <tr align="center">
-                <td>Cherly sintia</td>
-                <td>23</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
 
-            <tr align="center">
-                <td>Mawang</td>
-                <td>45</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                
-                <td>&check;</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr align="center">
-                <td>Endang mamat</td>
-                <td>30</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                
-                <td>&check;</td>
-                <td>&check;</td>
-                <td>&check;</td>
-                <td>&check;</td>
-            </tr>
-            <tr align="center">
-                <td>roman imra</td>
-                <td>55</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&check;</td>
-                <td>&check;</td>
-                <td>&check;</td>
-            </tr>
-            <tr align="center">
-                <td>Gerung rocky</td>
-                <td>60</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td></td>
-                <td></td>
-                <td>&check;</td>
-            </tr>
-            <tr align="center">
-                <td>Sandy kosasi</td>
-                <td>60</td>
-                <td>&check;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&check;</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            </tbody>
+        </table>
+        <a class="navigation-link" href="index.html">Kembali ke halaman survey</a>
+    </div>
 
-        </tbody>
-    </table>
-    <br>
-    <a href="index.html">Kembali ke halaman survey</a>
+    <script>
+
+        function render(rowData = []) {
+            const contentBody = document.querySelector("#content-body");
+            const brands = [
+                "Marioboro",
+                "Esse",	
+                "Luck strike",	
+                "Gudang garam filter"
+            ];
+            
+            rowData.forEach(({
+                name,
+                age,
+                gender,
+                smoker,
+                brands
+            }) => {
+                
+                const tds = [];
+                const tr = document.createElement("tr");
+                tr.setAttribute("align", "center");
+                for(let i = 0; i < 10; i++){
+                    tds.push(document.createElement("td"));
+                }
+
+                tds[0].textContent = name;
+                tds[1].textContent = age;
+                
+                if(gender === "Laki-laki"){
+                    tds[2].innerHTML = "&check;";
+                }
+
+                if(gender === "Perempuan"){
+                    tds[3].innerHTML = "&check;";
+                }
+                
+                if(smoker === "Perokok"){
+                    tds[4].innerHTML = "&check;";
+                }
+                
+                if(smoker === "Bukan perokok"){
+                    tds[5].innerHTML = "&check;";
+                }
+
+                brands.forEach((b,i) =>{
+                    tds[i + 6].innerHTML = b === brands[i] ? "&check;" : "";
+                });
+
+                for(let e of tds){
+                    tr.appendChild(e);
+                }
+
+                contentBody.appendChild(tr);
+
+            });
+
+        }
+
+        const storage = JSON.parse(localStorage.getItem("data-surveys")) || [];
+        render(storage);
+
+    </script>
 </body>
+
 </html>

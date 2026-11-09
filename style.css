@@ -139,6 +139,7 @@ html,body{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
     background-color: transparent;
     width: 1.2rem;
     height: 1.2rem;
@@ -165,8 +166,6 @@ html,body{
 
 
 .form-container > form > .form-input > .multi-option-col > div > input[type="checkbox"]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: transparent;
     width: 1.5rem;
@@ -224,4 +223,57 @@ html,body{
     font-size: 1rem;
     border-radius: 0.5rem;
     border: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > .title{
+    width: 80%;
+    text-align: center;
+    padding: 1.5rem 0px;
+}
+
+.container > table {
+    width: 80%;
+    height: fit-content;
+    border-collapse: collapse; 
+}
+
+.container > table > thead > tr {
+    width: 100%;
+    height: fit-content;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-right: none;
+}
+
+.container > table > thead > tr > th{
+    border-right: 1px solid rgba(0,0,0,0.25);
+}
+
+.container > table > tbody {
+    border: 1px solid rgba(0,0,0,0.25);
+}
+
+.container > table > tbody > tr:nth-child(even){
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+.container > table > tbody > tr > td, .container > table > thead > tr > th{
+    padding: 1rem 1.5rem;
+}
+
+.navigation-link {
+    text-decoration: none;
+    font-size: 3ch;
+    color: black;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }

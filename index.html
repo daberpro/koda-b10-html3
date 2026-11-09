@@ -9,7 +9,7 @@
 <body>
 
     <div class="form-container">
-        <form action="result.html">
+        <form id="form-source" action="result.html">
 
             <div class="form-header">
                 <div>
@@ -25,12 +25,12 @@
 
             <div class="form-input">
                 <label for="name">Siapa nama anda?</label>
-                <input name="nama" id="name" type="text">
+                <input required name="nama" id="name" type="text">
             </div>
 
             <div class="form-input">
                 <label for="age">Berapa umur anda?</label>
-                <input name="umur" id="age" type="number">
+                <input required name="umur" id="age" type="number">
             </div>
 
             <div class="form-input">
@@ -87,11 +87,10 @@
             </div>
 
         </form>
+        <a class="navigation-link" href="result.html">Lihat hasil Survey</a>
     </div>
 
-
-    <br>
-    <a href="result.html">Lihat hasil Survey</a>
+    <script src="script.js"></script>
 
 </body>
 
