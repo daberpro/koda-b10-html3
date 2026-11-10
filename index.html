@@ -3,91 +3,95 @@
 
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
-    <div class="form-container">
-        <form id="form-source" action="result.html">
+    <div class="w-full bg-purple-100 h-fit flex justify-start items-center flex-col p-4">
+        <form class="w-[800px] p-4 flex flex-col justify-start items-center gap-6" id="form-source" action="result.html">
 
-            <div class="form-header">
-                <div>
-                    <h1>Form Survey Perokok</h1>
+            <div class="w-full border-t-6 border-t-purple-600 flex bg-white border border-slate-400 rounded-3xl item-start justify-center flex-col gap-2">
+                <div class="w-full px-6 py-4 border-b border-slate-400">
+                    <h1 class="text-4xl font-semibold">Form Survey Perokok</h1>
                 </div>
-                <div>
-                    <span>your@mail.com</span>
+                <div class="w-full px-6 py-3 border-b border-slate-400">
+                    <span class="font-semibold">your@mail.com</span>
                 </div>
-                <div>
-                    <span>&ast; indicates required question</span>
+                <div class="w-full px-6 py-3">
+                    <span class="text-red-600">&ast; indicates required question</span>
                 </div>
             </div>
 
-            <div class="form-input">
-                <label for="name">Siapa nama anda?</label>
-                <input required name="nama" id="name" type="text">
+            <div class="flex w-full border border-slate-400 h-fit p-6 flex flex-col justify-center item-start gap-2 rounded-3xl bg-white">
+                <label for="name" class="text-md">Siapa nama anda?</label>
+                <input placeholder="nama" class="w-full p-4 outline-none border-b border-b-slate-400" required name="nama" id="name" type="text">
             </div>
 
-            <div class="form-input">
+            <div class="flex w-full border border-slate-400 h-fit p-6 flex flex-col justify-center item-start gap-2 rounded-3xl bg-white">
                 <label for="age">Berapa umur anda?</label>
-                <input required name="umur" id="age" type="number">
+                <input class="w-full p-4 outline-none border-b border-b-slate-400" required name="umur" id="age" type="number">
             </div>
 
-            <div class="form-input">
+            <div class="flex w-full border border-slate-400 h-fit p-6 flex flex-col justify-center item-start gap-2 rounded-3xl bg-white">
                 Apa jenis kelamin anda?
-                <div class="multi-option-col">
-                    <div>
-                        <input name="jenis-kelamin" id="male" type="radio" value="Laki-laki" checked><label
+                <div class="flex w-full justify-center item-start flex-col gap-2">
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-[''] before:w-3 before:h-3 before:rounded-full before:bg-purple-600 before:scale-0 checked:before:scale-100 flex rounded-full w-5 h-5 border-2 justify-center items-center box-border border-purple-600" name="jenis-kelamin" id="male" type="radio" value="Laki-laki" checked>
+                        <label class="w-full"
                             for="male">Laki-laki</label>
                     </div>
-                    <div>
-                        <input name="jenis-kelamin" id="female" type="radio" value="Perempuan"><label
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-[''] before:w-3 before:h-3 before:rounded-full before:bg-purple-600 before:scale-0 checked:before:scale-100 flex rounded-full w-5 h-5 border-2 justify-center items-center box-border border-purple-600" name="jenis-kelamin" id="female" type="radio" value="Perempuan">
+                        <label class="w-full"
                             for="female">Perempuan</label>
                     </div>
                 </div>
             </div>
 
-            <div class="form-input">
+            <div class="flex w-full border border-slate-400 h-fit p-6 flex flex-col justify-center item-start gap-2 rounded-3xl bg-white">
                 Apakah anda perokok?
-                <div class="multi-option-col">
-                    <div>
-                        <input checked name="perokok" id="smoker" type="radio" value="Perokok"><label
+                <div class="flex w-full justify-center item-start flex-col gap-2">
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-[''] before:w-3 before:h-3 before:rounded-full before:bg-purple-600 before:scale-0 checked:before:scale-100 flex rounded-full w-5 h-5 border-2 justify-center items-center box-border border-purple-600" checked name="perokok" id="smoker" type="radio" value="Perokok">
+                        <label class="w-full"
                             for="smoker">Ya</label>
                     </div>
-                    <div>
-                        <input name="perokok" id="notsmoker" type="radio" value="Bukan perokok"><label
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-[''] before:w-3 before:h-3 before:rounded-full before:bg-purple-600 before:scale-0 checked:before:scale-100 flex rounded-full w-5 h-5 border-2 justify-center items-center box-border border-purple-600" name="perokok" id="notsmoker" type="radio" value="Bukan perokok">
+                        <label class="w-full"
                             for="notsmoker">Tidak</label>
                     </div>
                 </div>
             </div>
 
-            <div class="form-input">
+            <div class="flex w-full border border-slate-400 h-fit p-6 flex flex-col justify-center item-start gap-2 rounded-3xl bg-white">
                 Jika anda perokok, rokok apa yang pernah anda coba?
-                <div class="multi-option-col">
-                    <div>
-                        <input type="checkbox" id="m1" name="merek" value="Gudang garam filter"><label for="m1">Gudang garam
+                <div class="flex w-full justify-center item-start flex-col gap-2">
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-['\2713'] font-bold before:text-sm before:text-purple-600 before:scale-0 checked:before:scale-100 flex rounded w-5 h-5 border-2 justify-center items-center flex-row box-border border-purple-600" type="checkbox" id="m1" name="merek" value="Gudang garam filter"><label for="m1">Gudang garam
                             filter</label><br>
                     </div>
-                    <div>
-                        <input type="checkbox" id="m2" name="merek" value="Luck Strike"><label for="m2">Luck
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-['\2713'] font-bold before:text-sm before:text-purple-600 before:scale-0 checked:before:scale-100 flex rounded w-5 h-5 border-2 justify-center items-center flex-row box-border border-purple-600" type="checkbox" id="m2" name="merek" value="Luck Strike"><label for="m2">Luck
                             Strike</label><br>
                     </div>
-                    <div>
-                        <input type="checkbox" id="m3" name="merek" value="Marioboro"><label for="m3">Marioboro</label><br>
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-['\2713'] font-bold before:text-sm before:text-purple-600 before:scale-0 checked:before:scale-100 flex rounded w-5 h-5 border-2 justify-center items-center flex-row box-border border-purple-600" type="checkbox" id="m3" name="merek" value="Marioboro"><label for="m3">Marioboro</label><br>
                     </div>
-                    <div>
-                        <input type="checkbox" id="m4" name="merek" value="Esse"><label for="m4">Esse</label><br>
+                    <div class="flex w-full justify-start items-center flex-row gap-2">
+                        <input class="appearance-none before:content-['\2713'] font-bold before:text-sm before:text-purple-600 before:scale-0 checked:before:scale-100 flex rounded w-5 h-5 border-2 justify-center items-center flex-row box-border border-purple-600" type="checkbox" id="m4" name="merek" value="Esse"><label for="m4">Esse</label><br>
                     </div>
                 </div>
             </div>
 
-            <div class="action">
-                <button type="submit">Send</button>
-                <button type="reset">Empty the form</button>
+            <div class="w-full flex justify-between items-center">
+                <button class="p-4 rounded-xl font-medium bg-purple-600 cursor-pointer text-white" type="submit">Send</button>
+                <button class="text-purple-600 font-medium cursor-pointer" type="reset">Empty the form</button>
             </div>
 
         </form>
-        <a class="navigation-link" href="result.html">Lihat hasil Survey</a>
+        <a class="w-full text-center pad-y-6 font-semibold text-xl" href="result.html">Lihat hasil Survey</a>
     </div>
 
     <script src="script.js"></script>
